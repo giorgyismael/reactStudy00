@@ -1,0 +1,35 @@
+Para configurar o webpack, primeiramente e preciso entender que ele é um módulo do Node, mas nele
+estaram as configurações para tranpilação do codigo.
+
+Neste arquivo é preciso indicar inicialmente alguns parametros
+
+Em Module.Export
+Entry = Local que a aplicação iniciara, e a partir dela os demais arquivos serão
+carregados para transpilar
+
+outout:
+    path:__dirname + 'public', caminho que corresponderá ao local onde o projeto está acontecendo
+    filename: './bundle.js', é o arquivo, que ao ser tranpilado, vai carregar todos os arquivos .js 
+    que seu projeto está utilizando.
+
+    *IMPORTANTE: Se este arquivo não for criado manualmente, ao executar webpack-dev-server, ele será
+    criado na memoria do navegador.Agora é possível criá-lo manualmente, e a cada alteração, ele será alterado.
+
+    para criá-lo basta executar o seguinte comando:
+    $./node_modules/.bin/webpack
+
+devServer:
+    port:8080, local onde o projeto vai rodar
+    contentBase: './public' indica de onde os arquivos são ser retirados
+            no momento de transpilação do codigo.
+
+
+Para rodar o projeto, é importante criar um alias de atalho para facilitar o trabalho. No arquivo
+package.jsom inclua a seguinte linha em script
+
+"scripts": {
+    "dev": "webpack-dev-server --progress --color --inline --hot"
+}
+
+Assim, para executar o projeto, basta executar o comando:
+$npm run dev

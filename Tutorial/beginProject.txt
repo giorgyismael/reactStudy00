@@ -1,0 +1,20 @@
+Par criar um projeto, após estar tudo instalado(Node, Mongo e VSCode), encontre o seu local de desenvolvimento 
+e realize os seguintes comandos:
+$npm init -y
+
+Este comando criar um arquivo package.json que é o descritor do projeto. Além disto é possível instalar
+dependencias através do repositorio npm
+
+Agora é necessário instalar o WebPack, que é o tranpilador do codigo que será feito, pois com ele
+é possível realizar o build da aplicação. Abaixo percebemos que o programa está amarrado a uma determinada
+versão, se isto não for interessante, basta retirar a versão.
+
+$npm i --save-dev webpack@1.14.0 webpack-dev-server@1.16.2
+
+A pasta node_module foi criada, pois é nela que as dependências são instaladas para que o projeto possa
+ser tranpilado. 
+
+* importante, ao pegar um projeto em andamento, basta acessar a pasta do projeto e executar 
+o comando '$npm i', pois  assim ele ira instalar todas as deppendências do projeto que estão configuradas
+no package.json
+
