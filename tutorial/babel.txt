@@ -1,0 +1,3 @@
+Babel é um aplicado de transpile de código novo para antigas versões. Pega as funcionalidades novas, 
+que estão sendo utilizadas no Java Script ES6, e não são suportadas ainda pelos browser ainda, e transpila de
+forma que o navegador atual consiga compreender.
