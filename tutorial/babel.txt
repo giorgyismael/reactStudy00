@@ -1,3 +1,20 @@
-Babel é um aplicado de transpile de código novo para antigas versões. Pega as funcionalidades novas, 
+Babel é um modulo de transpile de código novo para antigas versões. Pega as funcionalidades novas, 
 que estão sendo utilizadas no Java Script ES6, e não são suportadas ainda pelos browser ainda, e transpila de
 forma que o navegador atual consiga compreender.
+
+O babel -loder utilizado para as aulas é
+
+babel-core@6.22.1 -> É o núcleo do programa, que é necessário para funcionar
+babel-loader@6.2.10 ->É quem faz a interface de comunicação entre o webpack e o babel para processar os arquivos
+bable-preset-es2015@6.22.0 -> E um pacote de tradução espesifica do ES6, para conseguir traduzir coisas que o browser ainda não entede
+
+$npm i --save-dev babel-core@6.22.1 babel-loader@6.2.10 babel-preset-es2015@6.22.0
+
+--save-dev -> Já salva diretamente no arquivo packagel.jsom os modulos instalados
+
+Neste caso, o babel não será suficiente, pois está função que utiliza o operador Spread -> ''...'' precisa de um 
+modulo espesificopara conseguir ser transpilado para o browser.
+operador Spread (...) -> permite receber  vários argumentos, sem precisar necessárimente saber quais são e quantos são!
+Para instalar seu plugins basta:
+
+$npm i --save-dev babel-plugin-transform-object-rest-spread@6.22.0
