@@ -1,4 +1,4 @@
-Para configurar o webpack, primeiramente e preciso entender que ele é um módulo do Node, mas nele
+Para configurar o arquivo webpack.config.js, primeiramente e preciso entender que ele é um módulo do Node, mas nele
 estaram as configurações para tranpilação do codigo.
 
 Neste arquivo é preciso indicar inicialmente alguns parametros

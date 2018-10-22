@@ -1,0 +1,29 @@
+Pra que seja possível importar o arquivos .CSS é necessário instalr um plugin nas configurações do
+arquivo webpack  incluindo o seguinte 
+
+const ExtratTextPlugin = require('extract-test-webpack-plugin')
+
+Além disto é necessário informar que este puglin deve ser utilizado e qual o arquivo será criado na pasta,
+publica do projeto, que neste caso é app.css. 
+Fica da seguinte forma:
+
+ plugin: [ 
+        new ExtratTextPlugin('app.css')
+ ],
+
+ Logo depois é preciso configurar um novo Loder que vai ser responsavel por carregar o arquivo.ccs
+ ao tranpilar o codigo e jogá-lo em no diretorio public do projeto
+
+ Ao adicianar um novo loader, ficará da seuinte forma:
+
+ {
+            test: /\.css$/,
+            loader:ExtratTextPlugin.extract("style-loader", "css-loader")
+        }
+
+
+E por último, para que tudo funcione, é necessário instalar as dependencias que serão utilizadas para
+tranpilar o código em .css.
+Basta dirigitar no terminal o seguinte:
+
+$npm i --save-dev extract-text-webpack-plugin@1.0.1 style-loader@0.13.1 css-loader@0.26.1

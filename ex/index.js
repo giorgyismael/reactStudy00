@@ -1,5 +1,8 @@
 
+import './stile.css'
 import 'react'
+
+
 
 //relembrando as Arrow functions, quando utilizo a expressão "=>" estou implicitamente entendndo que estou retornando algo
 // da minhra função
