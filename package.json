@@ -1,13 +1,12 @@
 {
   "name": "00",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "",
+  "main": "webpack.config.js",
   "scripts": {
-    "dev": "webpack-dev-server --progress --color --inline --hot"
+    "dev": "webpack-dev-server --progress --color --inline --hot",
+    "webpack": "./node_modules/.bin/webpack"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.22.1",
     "babel-loader": "^6.2.10",
@@ -19,16 +18,17 @@
     "react": "^15.4.2",
     "style-loader": "^0.13.1",
     "webpack": "^1.14.0",
-    "webpack-dev-server": "^3.1.9"
+    "webpack-dev-server": "^1.16.2"
   },
-  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/giorgyismael/react_00.git"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/giorgyismael/react_00/issues"
   },
-  "homepage": "https://github.com/giorgyismael/react_00#readme",
-  "description": ""
+  "homepage": "https://github.com/giorgyismael/react_00#readme"
 }

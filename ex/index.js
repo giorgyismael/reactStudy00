@@ -1,5 +1,5 @@
 
-import './stile.css'
+import './estilo.css'
 import 'react'
 
 

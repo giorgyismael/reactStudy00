@@ -1,9 +1,9 @@
 const webpack = require('webpack')
-const ExtratTextPlugin = require('extract-text-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 //este plugin serve para carregar o .css para a pasta public ao realizaro o tranpile do código
 module.exports ={
-    entry: './ex/index.js',
+    entry: __dirname + '/ex/index.js',
     output:{
         path: __dirname + '/public',
         filename: '/bundle.js'
@@ -12,10 +12,7 @@ module.exports ={
         port: 8080,
         contentBase:'./public'
     },
-    //plgin utilizado para carregar arquivos CSS na tranpilação do código
-    plugin: [ 
-        new ExtratTextPlugin('app.css')
-     ],
+ 
     module: {
         // Loaders é responsavel por definir que programa vai carregar um determinado arquivo,
         // bem como definir o programa respinsavel pelo tranpile.
@@ -31,9 +28,10 @@ module.exports ={
             }
         },{
             test: /\.css$/,
-            loader: ExtratTextPlugin.extract("style-loader","css-loader")
-        }
-
-        ]
-    }
+            loader: ExtractTextPlugin.extract("style-loader","css-loader")
+        }]
+    },
+    plugins:[
+         new ExtractTextPlugin("bundle.css")
+    ]
 }
